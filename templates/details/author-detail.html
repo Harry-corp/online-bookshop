@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'links' %}
+    <link rel="stylesheet" href="{% static 'css/author-detail.css'%}">
+{% endblock %}
+
+{% block 'content' %}
+    <div class="authors-container">
+        <div class="container">
+            <div class="author-image-cover">
+                <img src="{{author.photo.url}}" alt="" class="author-img">
+            </div>
+            <div class="author-details">
+                <p class="name">{{ author.name }}</p>
+                <p class="birth-date">{{ author.birth_date }}</p>
+                <p class="bio">{{ author.bio }}</p>
+            </div>
+        </div>
+        <div class="other-pop-authors">
+            <p class="heading">Other popular authors</p>
+            {% for author in popular_authors %}
+                <a href="{{author.get_absolute_url}}">
+                    <div class="author-info">
+                        <img src="{{author.photo.url}}" alt="">
+                        <p class="pname">{{ author.name }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <p class="heading">{{ author.name }}'s books</p>
+    <div class="author-books-list">
+        {% if author_books %}
+        {% for book in author_books %}
+            <div class="book-info">
+                <div class="book-image-cover">
+                    <img src="{{ book.image.url }}" alt="">
+                    <a href="{% url 'book_detail' book.slug %}" class="book-detail">Book details</a>
+                </div>    
+                <h2 class="book-name">{{ book.title }}</h2>
+                <p class="book-author">{{ book.author }}</p>
+                <p class="book-price">$ {{ book.price }}</p>
+            </div>
+        {% endfor %}
+        {% else %}
+            <p class="sorryp">There are no books uploaded yet :(</p>
+        {% endif %}
+    </div>
+{% endblock %}

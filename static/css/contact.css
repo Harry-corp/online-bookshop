@@ -1,0 +1,191 @@
+body {
+    background: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+.contact-container {
+    margin: 50px auto;
+    background-image: url("../img/library-leftside.jpg");
+    background-size: cover;
+    width: fit-content;
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    display: flex;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 1.5px 8px rgba(0,0,0,0.07);
+    
+}
+
+.contact-title {
+    color: #633708;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ff8800;
+    font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #ff8800;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 1rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 1px 4px rgba(255, 140, 0, 0.07);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.15);
+    outline: none;
+}
+.contact-form textarea {
+    min-height: 100px;
+    max-height: 300px;
+    resize: vertical;
+}
+.contact-form button {
+    background: #ff8800;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 140, 0, 0.13);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.contact-form button:hover {
+    background: #ff6600;
+    box-shadow: 0 4px 16px rgba(255, 140, 0, 0.18);
+}
+.contact-info {
+    margin-top: 24px;
+    text-align: center;
+    color: #888;
+    font-size: 0.98rem;
+}
+.contact-info strong {
+    color: #ff8800;
+}
+.navbar-list a{
+    font-weight: normal;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.left{
+    width: 300px;
+    backdrop-filter: blur(5px);
+    background-color: #ffffffd4;
+    padding: 32px 28px 28px 28px;
+}
+.right{
+    width:400px;
+}
+
+/* .links{
+    gap: 20px;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    margin: 30px auto;
+
+}
+
+.link-box{
+    width: 150px;
+    height: 150px;
+    background-color: #481674;
+    border-radius: 8px;
+    border: solid 1px #340f54;
+    transition-duration: 0.3s;
+}
+.link-box a{
+    width: 100%;
+    height: 100%;
+}
+
+.link-box:hover{
+    background-color: white;
+} */
+
+.links {
+    display: flex;
+    justify-content: center; /* center all icons horizontally */
+    gap: 30px;               /* space between icons */
+    padding: 20px;
+}
+
+.link-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.link-box i {
+    font-size: 40px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.instagram a:hover {
+    background-color: #E1306C;
+    transform: scale(1.1);
+}
+
+.instagram a:hover i {
+    color: white;
+}
+
+.telegram a:hover {
+    background-color: #0088cc;
+    transform: scale(1.1);
+}
+
+.telegram a:hover i {
+    color: white;
+}
+
+.facebook a:hover {
+    background-color: #3b5998;
+    transform: scale(1.1);
+}
+
+.facebook a:hover i {
+    color: white;
+}
+
+.linkedin a:hover {
+    background-color: #0077b5;
+    transform: scale(1.1);
+}
+
+.linkedin a:hover i {
+    color: white;
+}
+.youtube a:hover {
+    background-color: #c50d0d;
+    transform: scale(1.1);
+}
+
+.youtube a:hover i {
+    color: white;
+}

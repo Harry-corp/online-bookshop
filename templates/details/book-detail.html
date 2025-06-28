@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'links' %}
+    <link rel="stylesheet" href="{% static 'css/book-detail.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+    <div class="container">
+        <div class="book-image-cover">
+            <img src="{{book.image.url}}" alt="">
+        </div>
+        <div class="book-details">
+            <p class="book-title">{{ book.title }}</p>
+            <p class="book-author">{{ book.author.name }}</p>
+            <p class="book-description">{{ book.description }}</p>
+            <p class="published-date">Published on: {{ book.published_date }}</p>
+            <i class="book-pages">Overall {{ book.pages }} pages.</i>
+            <p class="book-price">$ {{ book.price }}</p>
+            <a href="#" class="add-to-cart">Add to cart</a>
+        </div>
+    </div>
+    <h1 class="heading">Related Books</h1>
+    <div class="related-books-container">
+        {% for book in related_books %}
+            <div class="book-info">
+                <div class="book-image-cover">
+                    <img src="{{ book.image.url }}" alt="">
+                    <a href="{% url 'book_detail' book.slug %}" class="book-detail">Book details</a>
+                </div>    
+                <h2 class="book-name">{{ book.title }}</h2>
+                <p class="book-author">{{ book.author }}</p>
+                <p class="book-price">$ {{ book.price }}</p>
+                
+            </div>
+        {% endfor %}
+    </div>
+    <hr style="width: 100%; color: #ff731c;">
+    <a href="{% url 'store' %}" class="view-more">View All books <i class="arrow-right">&#x2192;</i></a>
+{% endblock %}

@@ -1,0 +1,84 @@
+.book-image-cover{
+    width: 250px;
+    height: 338px;
+    padding: 10px;
+    margin: auto 0;
+}
+.book-image-cover:hover img{
+    filter: blur(0);
+    transform: scale(1.05);
+}
+.book-details{
+    height: 400px;
+    text-align: left;
+}
+.book-author{
+    font-size: 1.1em;
+}
+.book-title{
+    color: #292392;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.published-date{
+    color:rgb(131, 131, 131);
+}
+.book-description{
+    font-size: 1em;
+    width: 700px;
+}
+.book-price{
+    color: #b75f47;
+}
+.book-details a{
+    color: #415f89;
+    padding: 10px;
+    background-color: white;
+    border: solid 1px #22334b;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.book-details a:hover{
+    color: white;
+    background-color: #22334b;
+}
+.related-books-container{
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    color:#374964;
+}
+.related-books-container img{
+    width: 200px;
+    height: 298px;
+}
+.related-books-container .book-info  a{
+    display: none;
+    width: 150px;   
+    color: #ffffff;
+    text-decoration: none;
+    border: #ae7c30 1px solid;
+    background-color: #f37e10;
+    padding: 15px 20px;
+    margin: 0px 30px;
+    position: absolute;
+    transition:1s;
+    font-size: 1.2em;
+    font-family:sans-serif;
+}
+.related-books-container .book-image-cover:hover a{
+    display: block;
+}
+.related-books-container .book-image-cover:hover img{
+    filter: blur(5px);
+    transform: scale(1);
+}

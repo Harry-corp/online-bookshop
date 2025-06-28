@@ -1,0 +1,337 @@
+.container{
+    display:flex;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    align-items: normal;
+    margin: 0 auto;
+}
+.filterform{
+    display:grid;
+}
+.container{
+    width:auto;
+    height:auto;
+    margin:auto;
+    justify-content:flex-start;
+}
+
+
+.price-filter {
+    width: 250px;
+    background: #fff;
+    margin: auto;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.price-filter h3 {
+    font-size: 1.2rem;
+    color: #363678;
+    margin-bottom: 15px;
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 25px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2 - 12px);
+}
+
+.field span {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #999;
+}
+
+.field input {
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.separator {
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.slider {
+    height: 5px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 18px;
+}
+
+.slider .progress {
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #ff7b00;
+    left: 0%;
+    right: 0%;
+    z-index: 1;
+}
+
+.range-input {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin-top: -18px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.range-input input[type="range"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 2;
+}
+
+.range-input input[type="range"].range-min {
+    z-index: 3;
+}
+
+.range-input input[type="range"].range-max {
+    z-index: 2;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff7b00;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff7b00;
+    pointer-events: auto;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+input[type="range"]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff7b00;
+    pointer-events: auto;
+    appearance: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.range-input input[type="range"]:focus {
+    outline: none;
+}
+
+.filter-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #ff7b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-submit:hover {
+    background: #e66f00;
+}
+
+/* Add some basic styling for the form container */
+.filterform {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.left {
+    flex: 0 0 300px;
+}
+
+.right {
+    flex: 1;
+}
+
+.books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.book-info {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.book-info a{
+    position: absolute;
+}
+
+.book-info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.book-image-cover {
+    position: relative;
+    width: 100%;
+    padding-top: 130%;
+    overflow: hidden;
+    background: #f8f8f8;
+    display: grid;
+}
+
+.book-image-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.book-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d2d4d;
+    margin: 10px 12px 4px;
+    line-height: 1.3;
+}
+
+.book-author {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 12px 4px;
+}
+
+.book-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ff7b00;
+    margin: 0 12px 10px;
+}
+
+.book-detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: rgba(255, 123, 0, 0.9);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.book-info:hover .book-detail {
+    transform: translateY(0);
+}
+
+.heading {
+    font-size: 2rem;
+    color: #2d2d4d;
+    margin: 20px 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Filter Section Improvements */
+.filterform {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.price-filter {
+    margin-bottom: 25px;
+}
+
+select[name="category"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #444;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select[name="category"]:hover {
+    border-color: #ff7b00;
+}
+

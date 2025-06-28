@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-nook</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* horizontal center */
+            align-items: center;     /* vertical center */
+            min-height: 100vh;       /* full screen height */
+            margin: 0;               /* remove default margin */
+            background: #020024;
+            background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 224, 187) 35%, rgb(254, 254, 254) 100%);
+        }
+        .code{
+            font-family: sans-serif;
+            font-size: 5em;
+            margin-top: 0;
+        }
+        .description{
+            font-size: 3em;
+        }
+        .main{
+            margin:auto;
+            display: inline;
+            width: 1000px;
+            text-align: center;
+        }
+        .gear{
+            display: inline;
+            width: 100px;
+            font-size: 7em;
+            animation: gear infinite;
+        }
+        @keyframes gear{
+            0%{
+                transform: rotate(0);
+            }
+            50%{
+                transform: rotate(90deg);
+            }
+            100%{
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 class="code">404</h1>
+        <p class="description">Sorry this page doesn't exist :(</p>
+        <p class="gear">⚙️</p>
+    </div>
+    
+</body>
+</html>

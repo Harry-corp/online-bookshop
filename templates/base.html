@@ -1,0 +1,32 @@
+
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-nook</title>
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png" sizes="40x40">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block 'links' %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-navbar">
+            <span class="logo">Book Shop</span>
+        </div>
+        <div class="right-navbar">
+            <ul class="navbar-list">
+                <li><a href="{% url 'main' %}">Home</a></li>
+                <li><a href="{% url 'store' %}">Store</a></li>
+                <li><a href="{% url 'authors' %}">Authors</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+    {% block 'content' %}{% endblock %}
+
+    {% block 'scripts' %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'content' %}
+
+    <div class="features_main">
+        <div class="features-left">
+            <h1>Welcome to BookShop</h1>
+            <p>Discover your next favorite book with us. We offer a wide selection of books across all genres. This site was created by
+                <a href="https://azimboyev.uz/" target="_blank">A.Husniyor</a></p>
+            <div class="cta-button">
+                <a href="{% url 'store' %}" class="btn">Browse Books</a>
+            </div>
+        </div>
+        <div class="features-right">
+            <img src="{% static 'img/several-books.png' %}" alt="">
+        </div>
+    </div>
+    <div class="top-categories">
+        <h1 class="categories-heading header">Explore our top categories</h1>
+        <div class="top-categories-list">
+            {% for category in top_categories %}
+                <div class="category">
+                    <img src="{{ category.image.url }}" alt="">
+                    <h2 class="category-name">{{ category.name }}</h2>
+                    <p class="category-description">{{ category.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'categories' %}">View More <i class="arrow-right">&#x2192;</i></a>
+    </div>
+    <div class="new-books">
+        <h1 class="header">New Release Books</h1>
+        <div class="new-books-list">
+            {% for book in new_books %}
+                <div class="book-info">
+                    <div class="book-image-cover">
+                        <img src="{{ book.image.url }}" alt="">
+                        <a href="{% url 'book_detail' book.slug %}" class="book-detail">Book details</a>
+                    </div>    
+                    <h2 class="book-name">{{ book.title }}</h2>
+                    <p class="book-author">{{ book.author }}</p>
+                    <p class="book-price">$ {{ book.price }}</p>
+                    
+                </div>
+            {% endfor %}
+        </div>
+        <hr style="width: 100%; color: #ff731c;">
+        <a href="{% url 'store' %}" class="view-more">View All books <i class="arrow-right">&#x2192;</i></a>
+    </div>
+    <div class="popular-authors">
+        <h1 class="header">Most popular authors</h1>
+        <div class="authors-list">
+            {% for author in authors %}
+            <div class="author-info">
+                <img src="{{ author.photo.url }}" alt="{{author.name}}">
+                <h2 class="author-name">{{ author.name }}</h2>
+                <p class="author-bio">{{ author.bio }}</p>
+                <a href="{{ author.get_absolute_url }}" class="know_more_author">Know more...</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+        
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
